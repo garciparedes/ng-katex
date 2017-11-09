@@ -1,6 +1,6 @@
 {
   "name": "ng-katex",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library",
   "main": "md-katex.umd.js",
   "jsnext:main": "md-katex.esm.js",
@@ -8,9 +8,10 @@
   "types": "md-katex.d.ts",
   "scripts": {
     "copy": "node tools/copy-package.js && node tools/cleanup.js",
-    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc",
+    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc && ngc",
     "postbundle": "node tools/removecode.js",
-    "build": "npm run bundle && npm run copy"
+    "build": "npm run bundle && npm run copy",
+    "publish": "cd ./dist && npm publish"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "zone.js": "^0.8.18"
   },
   "devDependencies": {
+    "@angular/compiler": "^5.0.1",
     "@angular/compiler-cli": "^5.0.1",
     "del": "^3.0.0",
     "node-sass": "^4.6.0",
@@ -38,6 +40,6 @@
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-typescript": "^0.8.1",
-    "typescript": "^2.6.1"
+    "typescript": "2.4.2"
   }
 }
