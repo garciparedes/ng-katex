@@ -1,7 +1,7 @@
 import { Directive } from '@angular/core';
-import { NgKatexService } from './ng-katex.service';
+import { KatexService } from './ng-katex.service';
 
 @Directive({
-  selector: '[NgKatex]'
+  selector: '[Katex]'
 })
-export class NgKatexDirective { }
+export class KatexDirective { }

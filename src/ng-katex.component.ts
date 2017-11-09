@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
     selector: 'ng-katex',
     template: `<span>Hello, I'm KaTeX</span>`
 })
-export class NgKatexComponent { }
+export class KatexComponent { }
