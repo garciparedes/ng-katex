@@ -1,5 +1,7 @@
 # ng-katex
 
+Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library
+
 ## Description
 [TODO]
 
