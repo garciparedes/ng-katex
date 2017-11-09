@@ -5,6 +5,9 @@ Angular module to write beautiful math expressions with TeX syntax boosted by Ka
 ## Description
 [TODO]
 
+## Install
+[TODO]
+
 ## Usage
 [TODO]
 
