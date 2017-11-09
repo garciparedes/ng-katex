@@ -10,5 +10,5 @@
       "outDir": "./dist",
       "lib": ["es2015", "dom"]
    },
-   "files": ["./lib/ng-katex.ts"]
+   "files": ["./src/ng-katex.ts"]
 }
