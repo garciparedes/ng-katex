@@ -1,0 +1,22 @@
+{
+  "name": "ng-katex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garciparedes/ng-katex.git"
+  },
+  "author": "garciparedes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garciparedes/ng-katex/issues"
+  },
+  "homepage": "https://github.com/garciparedes/ng-katex#readme",
+  "dependencies": {
+    "@angular/core": "^5.0.1"
+  }
+}
