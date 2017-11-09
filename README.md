@@ -6,7 +6,9 @@ Angular module to write beautiful math expressions with TeX syntax boosted by Ka
 [TODO]
 
 ## Install
-[TODO]
+```
+npm install ng-katex --save
+```
 
 ## Usage
 [TODO]
