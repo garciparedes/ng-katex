@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
-
 @Component({
     selector: 'ng-katex',
-    template: `<span [Katex]="expression">{{expression}}</span>`
+    template: `<span [katex]="expression" ></span>`,
 })
 export class KatexComponent {
 

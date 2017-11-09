@@ -1,12 +1,11 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 import { KatexService } from './ng-katex.service';
 
 @Directive({
-  selector: '[Katex]'
+  selector: '[katex]'
 })
 export class KatexDirective {
-
-  private expression: string;
+  @Input('katex') expression: string;
 
   constructor(private katexService: KatexService,
               private el: ElementRef) { }

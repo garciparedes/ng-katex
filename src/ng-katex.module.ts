@@ -6,7 +6,6 @@ import { KatexComponent } from './ng-katex.component';
 @NgModule({
     imports: [],
     exports: [
-      KatexDirective,
       KatexComponent
     ],
     declarations: [
