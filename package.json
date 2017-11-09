@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/garciparedes/ng-katex#readme",
   "dependencies": {
-    "@angular/core": "^5.0.1"
+    "@angular/core": "^5.0.1",
+    "rxjs": "^5.5.2",
+    "zone.js": "^0.8.18"
+  },
+  "devDependencies": {
+    "rollup": "^0.51.2"
   }
 }
