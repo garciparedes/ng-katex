@@ -11,7 +11,7 @@
     "url": "git+https://github.com/garciparedes/ng-katex.git"
   },
   "author": "garciparedes",
-  "license": "Apache License, Version 2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/garciparedes/ng-katex/issues"
   },
