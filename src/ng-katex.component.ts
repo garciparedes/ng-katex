@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'ng-katex',
-    template: `<span>Hello, I'm KaTeX</span>`
+    template: `<span [Katex]="expression">{{expression}}</span>`
 })
-export class KatexComponent { }
+export class KatexComponent {
+
+  @Input() expression: string;
+}
