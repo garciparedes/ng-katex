@@ -9,15 +9,15 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "ng build --prod --aot=false --base-href ng-katex --output-path ../docs "
+    "publish": "ng build --base-href ng-katex --output-path ../docs "
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.4.6",
-    "@angular/common": "^5.0.1",
+    "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",
-    "@angular/forms": "^5.0.1",
+    "@angular/forms": "^5.0.0",
     "@angular/http": "^5.0.0",
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
