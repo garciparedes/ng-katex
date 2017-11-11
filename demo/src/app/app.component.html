@@ -2,4 +2,7 @@
 <h1>
   Welcome to {{title}}!
 </h1>
-<h1><ng-katex [equation]="equation" [options]="options"></ng-katex></h1>
+
+<p>Type here your equation:</p>
+<p><input type="text" [(ngModel)]="equation"></p>
+<p><ng-katex [equation]="equation" [options]="options"></ng-katex></p>

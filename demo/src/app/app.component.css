@@ -1,0 +1,7 @@
+p, h1 {
+  text-align: center;
+}
+input {
+  width: 60%;
+}
+ng-katex { font-size: 1.5em; }
