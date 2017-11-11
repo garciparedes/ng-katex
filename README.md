@@ -16,7 +16,7 @@ npm install ng-katex --save
 ## Usage
 
 To add the module to your proyect add the `KatexModule` to `import`'s field of your parent module:
-```
+```js
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
@@ -36,11 +36,11 @@ platformBrowserDynamic().bootstrapModule(AppModule);
 
 And then you can use it as component:
 
-```
+```js
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'example-app',
+  selector: 'my-app',
   template: `<ng-katex [expression]="equation">`
 })
 export class AppComponent {
@@ -50,9 +50,9 @@ export class AppComponent {
 
 Or as directive:
 
-```
+```js
 @Component({
-  selector: 'example-app',
+  selector: 'my-app',
   template: `<h1 [katex]="equation"></h1>`
 })
 export class AppComponent {
