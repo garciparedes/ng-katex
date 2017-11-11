@@ -6,10 +6,6 @@ import * as katex from 'katex';
 export class KatexService {
 
   renderExpression(equation: string, element: ElementRef, options?: any) {
-    try {
-      katex.render(equation, element.nativeElement, options);
-    } catch (e){
-        console.log(e);
-    }
+    return katex.render(equation, element.nativeElement, options);
   }
 }
