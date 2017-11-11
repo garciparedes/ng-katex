@@ -3,11 +3,9 @@
 [![npm](https://img.shields.io/npm/v/ng-katex.svg)](https://www.npmjs.com/package/ng-katex)
 [![npm](https://img.shields.io/npm/l/ng-katex.svg)](LICENSE)
 
-Angular module to write beautiful math expressions with TeX syntax boosted by [KaTeX](https://github.com/Khan/KaTeX) library
-
 ## Description
-
-[TODO]
+Angular module to write beautiful math expressions with TeX syntax boosted by [KaTeX](https://github.com/Khan/KaTeX) library
+You can see a demo [here](https://garciparedes.github.io/ng-katex).
 
 ## Install
 
