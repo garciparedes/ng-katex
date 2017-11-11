@@ -1,6 +1,6 @@
 {
   "name": "ng-katex",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library",
   "main": "ng-katex.umd.js",
   "jsnext:main": "ng-katex.esm.js",
@@ -18,14 +18,25 @@
     "url": "git+https://github.com/garciparedes/ng-katex.git"
   },
   "author": {
-    "name" : "Sergio García Prado",
-    "email" : "sergio@garciparedes.me",
-    "url" : "https://garciapredes.me"
+    "name": "Sergio García Prado",
+    "email": "sergio@garciparedes.me",
+    "url": "https://garciapredes.me"
   },
   "keywords": [
-    "angular","katex","latex", "math", "package", "typescript", "angular2",
-    "typesetting", "formulae", "library", "module", "angular-module",
-    "angular-directive", "angular-component"
+    "angular",
+    "katex",
+    "latex",
+    "math",
+    "package",
+    "typescript",
+    "angular2",
+    "typesetting",
+    "formulae",
+    "library",
+    "module",
+    "angular-module",
+    "angular-directive",
+    "angular-component"
   ],
   "license": "MIT",
   "bugs": {

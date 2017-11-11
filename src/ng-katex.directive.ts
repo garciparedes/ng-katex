@@ -5,12 +5,14 @@ import { KatexService } from './ng-katex.service';
   selector: '[katex]'
 })
 export class KatexDirective {
+
   @Input('katex') expression: string;
 
-  constructor(private katexService: KatexService,
-              private el: ElementRef) { }
+  constructor(private el: ElementRef,
+              private katexService: KatexService) { }
 
   ngOnChanges() {
-      this.katexService.getExpression(this.expression,this.el.nativeElement)
-    }
+    this.katexService.getExpression(this.expression, this.el.nativeElement);
+  }
+  
 }
