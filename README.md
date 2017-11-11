@@ -60,6 +60,20 @@ export class AppComponent {
 }
 ```
 
+You can add options to `ng-katex` components with:
+
+```html
+<ng-katex [expression]="equation">
+```
+
+Or to `katex` directive with:
+
+```html
+<span [katex]="expression" [katex-options]="options"></span>
+```
+
+The `options` object structure is defined [here](https://github.com/Khan/KaTeX#rendering-options).
+
 ## Contributors
 
 - Sergio García Prado [@garciparedes](https://garciparedes.me)

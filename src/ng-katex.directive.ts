@@ -7,12 +7,13 @@ import { KatexService } from './ng-katex.service';
 export class KatexDirective {
 
   @Input('katex') expression: string;
+  @Input('katex-options') options: any;
 
   constructor(private el: ElementRef,
               private katexService: KatexService) { }
 
   ngOnChanges() {
-    this.katexService.renderExpression(this.expression, this.el);
+    this.katexService.renderExpression(this.expression, this.el, this.options);
   }
 
 }
