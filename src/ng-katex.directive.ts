@@ -12,7 +12,7 @@ export class KatexDirective {
               private katexService: KatexService) { }
 
   ngOnChanges() {
-    this.katexService.getExpression(this.expression, this.el.nativeElement);
+    this.katexService.renderExpression(this.expression, this.el);
   }
-  
+
 }
