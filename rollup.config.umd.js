@@ -14,6 +14,9 @@ export default {
   sourcemap: true,
   external: [
     '@angular/core',
+    'katex',
+    'rxjs',
+    'zone.js'
   ],
   plugins: [
     angular(
