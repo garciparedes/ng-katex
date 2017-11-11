@@ -1,6 +1,6 @@
 {
   "name": "ng-katex",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library",
   "main": "ng-katex.umd.js",
   "jsnext:main": "ng-katex.esm.js",
