@@ -1,6 +1,6 @@
 {
   "name": "ng-katex",
-  "version": "0.2.12",
+  "version": "0.2.14",
   "description": "Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library",
   "main": "ng-katex.umd.js",
   "jsnext:main": "ng-katex.esm.js",
@@ -8,7 +8,7 @@
   "types": "ng-katex.d.ts",
   "scripts": {
     "copy": "node tools/copy-package.js && node tools/cleanup.js",
-    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc && ngc",
+    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc",
     "postbundle": "node tools/removecode.js",
     "build": "npm run bundle && npm run copy",
     "publish": "cd ./dist && npm publish"
@@ -43,14 +43,15 @@
     "url": "https://github.com/garciparedes/ng-katex/issues"
   },
   "homepage": "https://github.com/garciparedes/ng-katex#readme",
+  "peerDependencies": {
+    "@angular/core": ">=2.2.1"
+  },
   "dependencies": {
-    "@angular/core": "^5.0.1",
-    "katex": "^0.9.0-alpha1",
-    "rxjs": "^5.5.2",
-    "zone.js": "^0.8.18"
+    "katex": "^0.9.0-alpha1"
   },
   "devDependencies": {
     "@angular/cli": "^1.5.0",
+    "@angular/core": "^5.0.1",
     "@angular/compiler": "^5.0.1",
     "@angular/compiler-cli": "^5.0.1",
     "del": "^3.0.0",
