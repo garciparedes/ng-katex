@@ -34,7 +34,7 @@ class AppModule {}
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
 
-And then you can use it as component:
+And then you can use it as follows:
 
 ```js
 import { Component } from '@angular/core';
@@ -48,29 +48,7 @@ export class AppComponent {
 }
 ```
 
-Or as directive:
-
-```js
-@Component({
-  selector: 'my-app',
-  template: `<h1 [katex]="equation"></h1>`
-})
-export class AppComponent {
-  equation: string = ''\sum_{i=1}^nx_i'';
-}
-```
-
 You can add options to `ng-katex` components with:
-
-```html
-<ng-katex [equation]="equation" [options]="options">
-```
-
-Or to `katex` directive with:
-
-```html
-<span [katex]="equation" [katex-options]="options"></span>
-```
 
 The `options` object structure is defined [here](https://github.com/Khan/KaTeX#rendering-options).
 

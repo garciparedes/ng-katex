@@ -7,11 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'ng-katex demo app';
-  equation: string = "\\sum_\{i=1\}^nx_i";
+  equation: string = "c = \\pm\\sqrt{a^2 + b^2}";
   options: any = {
     displayMode: true,
-    macros: {
-      "\\RR": "\\mathbb{R}"
-    }
   };
 }

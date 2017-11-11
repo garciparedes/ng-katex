@@ -14,7 +14,6 @@ import { KatexComponent } from './ng-katex.component';
   ],
   exports: [
     KatexComponent,
-    KatexDirective,
   ],
 })
 export class KatexModule { }
