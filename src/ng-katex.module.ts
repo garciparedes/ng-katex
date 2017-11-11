@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
-import { KatexDirective } from './ng-katex.directive';
 import { KatexService } from './ng-katex.service';
+import { KatexDirective } from './ng-katex.directive';
 import { KatexComponent } from './ng-katex.component';
 
 @NgModule({
-    imports: [],
-    exports: [
-      KatexComponent,
-      KatexDirective
-    ],
-    declarations: [
-      KatexDirective,
-      KatexComponent
-    ],
-    providers: [
-      KatexService
-    ],
+  imports: [],
+  providers: [
+    KatexService,
+  ],
+  declarations: [
+    KatexDirective,
+    KatexComponent,
+  ],
+  exports: [
+    KatexComponent,
+    KatexDirective,
+  ],
 })
 export class KatexModule { }
