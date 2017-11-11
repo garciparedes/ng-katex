@@ -1,6 +1,6 @@
 import { Injectable, ElementRef } from '@angular/core';
 
-import * as katex from 'katex';
+import * as katex from 'katex/katex.js';
 
 @Injectable()
 export class KatexService {
