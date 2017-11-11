@@ -5,3 +5,8 @@ input {
   width: 60%;
 }
 ng-katex { font-size: 1.5em; }
+
+a {
+  color: #329894;
+  text-decoration: none;
+}

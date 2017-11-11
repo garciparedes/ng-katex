@@ -25,7 +25,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "p, h1 {\n  text-align: center;\n}\ninput {\n  width: 60%;\n}\nng-katex { font-size: 1.5em; }\n", ""]);
+exports.push([module.i, "p, h1 {\n  text-align: center;\n}\ninput {\n  width: 60%;\n}\nng-katex { font-size: 1.5em; }\n\na {\n  color: #329894;\n  text-decoration: none;\n}\n", ""]);
 
 // exports
 
@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<h1>\n  Welcome to {{title}}!\n</h1>\n\n<p>Type here your equation:</p>\n<p><input type=\"text\" [(ngModel)]=\"equation\"></p>\n<p><ng-katex [equation]=\"equation\" [options]=\"options\"></ng-katex></p>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<h1>\n  Welcome to <a target=\"_blank\" [href]=\"url\">{{title}}</a> demo app!\n</h1>\n\n<p>Type here your equation:</p>\n<p><input type=\"text\" [(ngModel)]=\"equation\"></p>\n<p><ng-katex [equation]=\"equation\" [options]=\"options\"></ng-katex></p>\n"
 
 /***/ }),
 
@@ -57,8 +57,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'ng-katex demo app';
-        this.equation = "c = \\pm\\sqrt{a^2 + b^2}";
+        this.title = 'ng-katex';
+        this.url = 'https://github.com/garciparedes/ng-katex';
+        this.equation = 'c = \\pm\\sqrt{a^2 + b^2}';
         this.options = {
             displayMode: true,
         };

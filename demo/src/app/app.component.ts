@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'ng-katex demo app';
-  equation: string = "c = \\pm\\sqrt{a^2 + b^2}";
+  title: string = 'ng-katex';
+  url: string = 'https://github.com/garciparedes/ng-katex';
+  equation: string = 'c = \\pm\\sqrt{a^2 + b^2}';
   options: any = {
     displayMode: true,
   };
