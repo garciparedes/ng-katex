@@ -17,7 +17,16 @@
     "type": "git",
     "url": "git+https://github.com/garciparedes/ng-katex.git"
   },
-  "author": "garciparedes",
+  "author": {
+    "name" : "Sergio García Prado",
+    "email" : "sergio@garciparedes.me",
+    "url" : "https://garciapredes.me"
+  },
+  "keywords": [
+    "angular","katex","latex", "math", "package", "typescript", "angular2",
+    "typesetting", "formulae", "library", "module", "angular-module",
+    "angular-directive", "angular-component"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/garciparedes/ng-katex/issues"
