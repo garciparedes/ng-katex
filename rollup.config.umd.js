@@ -17,7 +17,7 @@ export default {
     angular(
       {
         preprocessors:{
-          template:template => template,
+          template: template => template,
           style: scss => {
             let css;
             if(scss){

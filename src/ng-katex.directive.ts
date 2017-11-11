@@ -1,7 +1,16 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 import { KatexService } from './ng-katex.service';
 
 @Directive({
-  selector: '[Katex]'
+  selector: '[katex]'
 })
-export class KatexDirective { }
+export class KatexDirective {
+  @Input('katex') expression: string;
+
+  constructor(private katexService: KatexService,
+              private el: ElementRef) { }
+
+  ngOnChanges() {
+      this.katexService.getExpression(this.expression,this.el.nativeElement)
+    }
+}

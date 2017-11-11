@@ -3,15 +3,66 @@
 Angular module to write beautiful math expressions with TeX syntax boosted by [KaTeX](https://github.com/Khan/KaTeX) library
 
 ## Description
+
 [TODO]
 
 ## Install
+
+To install the module you can simply type it on your command line:
 ```
 npm install ng-katex --save
 ```
 
 ## Usage
-[TODO]
+
+To add the module to your proyect add the `KatexModule` to `import`'s field of your parent module:
+```
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+
+import { KatexModule } from 'ng-katex';
+
+@NgModule({
+  imports: [BrowserModule, KatexModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+
+class AppModule {}
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+```
+
+And then you can use it as component:
+
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'example-app',
+  template: `<ng-katex [expression]="equation">`
+})
+export class AppComponent {
+  equation: string = ''\sum_{i=1}^nx_i'';
+}
+```
+
+Or as directive:
+
+```
+@Component({
+  selector: 'example-app',
+  template: `<h1 [katex]="equation"></h1>`
+})
+export class AppComponent {
+  equation: string = ''\sum_{i=1}^nx_i'';
+}
+```
+
+## Contributors
+
+- Sergio García Prado [@garciparedes](https://garciparedes.me)
 
 ## Contributing
 
