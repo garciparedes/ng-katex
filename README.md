@@ -41,7 +41,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<ng-katex [expression]="equation">`
+  template: `<ng-katex [equation]="equation">`
 })
 export class AppComponent {
   equation: string = ''\sum_{i=1}^nx_i'';
@@ -63,13 +63,13 @@ export class AppComponent {
 You can add options to `ng-katex` components with:
 
 ```html
-<ng-katex [expression]="equation">
+<ng-katex [equation]="equation" [options]="options">
 ```
 
 Or to `katex` directive with:
 
 ```html
-<span [katex]="expression" [katex-options]="options"></span>
+<span [katex]="equation" [katex-options]="options"></span>
 ```
 
 The `options` object structure is defined [here](https://github.com/Khan/KaTeX#rendering-options).

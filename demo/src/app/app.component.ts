@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'app';
-  ex: string = '3 +2';
+  title: string = 'ng-katex demo app';
+  equation: string = "\\sum_\{i=1\}^nx_i";
+  options: any = {
+    displayMode: true,
+    macros: {
+      "\\RR": "\\mathbb{R}"
+    }
+  };
 }

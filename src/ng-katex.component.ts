@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ng-katex',
-  template: `<span [katex]="expression" [katex-options]="options"></span>`,
+  template: `<span [katex]="equation" [katex-options]="options"></span>`,
 })
 export class KatexComponent {
 
-  @Input() expression: string;
+  @Input() equation: string;
   @Input() options?: any;
 
 }

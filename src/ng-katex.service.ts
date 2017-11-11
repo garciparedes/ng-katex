@@ -5,8 +5,8 @@ import * as katex from 'katex';
 @Injectable()
 export class KatexService {
 
-  renderExpression(e: string, element: ElementRef, options?: any) {
-    return katex.render(e, element.nativeElement, options);
+  renderExpression(equation: string, element: ElementRef, options?: any) {
+    return katex.render(equation, element.nativeElement, options);
   }
 
 }
