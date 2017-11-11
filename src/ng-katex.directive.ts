@@ -8,8 +8,8 @@ export class KatexDirective {
 
   @Input('katex') expression: string;
 
-  constructor(el: ElementRef,
-              katexService: KatexService) { }
+  constructor(private el: ElementRef,
+              private katexService: KatexService) { }
 
   ngOnChanges() {
     this.katexService.renderExpression(this.expression, this.el);
