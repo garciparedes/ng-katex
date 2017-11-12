@@ -13223,8 +13223,11 @@ function __metadata(k, v) {
 var KatexService = (function () {
     function KatexService() {
     }
-    KatexService.prototype.renderExpression = function (equation, element, options) {
+    KatexService.prototype.render = function (equation, element, options) {
         return Object(__WEBPACK_IMPORTED_MODULE_1_katex__["render"])(equation, element.nativeElement, options);
+    };
+    KatexService.prototype.renderToString = function (equation, options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_1_katex__["renderToString"])(equation, options);
     };
     KatexService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */])()
@@ -13270,7 +13273,7 @@ var KatexDirective = (function () {
     }
     KatexDirective.prototype.ngOnChanges = function () {
         try {
-            this.katexService.renderExpression(this.equation, this.el, this.options);
+            this.katexService.render(this.equation, this.el, this.options);
         }
         catch (e) {
             this.onError.emit(e);
