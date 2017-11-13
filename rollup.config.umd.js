@@ -3,9 +3,9 @@ import commonjs from 'rollup-plugin-commonjs';
 import angular from 'rollup-plugin-angular';
 import typescript from 'rollup-plugin-typescript';
 var sass = require('node-sass');
-import {nameLibrary,PATH_SRC,PATH_DIST} from './config-library.js';
+import { nameLibrary, PATH_SRC, PATH_DIST} from './config-library.js';
 export default {
-  input: PATH_SRC+nameLibrary+'.ts',
+  input: PATH_SRC + nameLibrary+'.ts',
   output: {
     format: 'umd',
     file: PATH_DIST + nameLibrary + ".umd.js",
@@ -38,10 +38,7 @@ export default {
     typescript({
       typescript:require('typescript')
     }),
-    resolve({
-      module: true,
-      main: true
-    }),
+    resolve(),
     commonjs({
       include: 'node_modules/**',
     })

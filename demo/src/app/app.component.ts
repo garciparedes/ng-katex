@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { KatexOptions } from 'ng-katex';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent {
   title: string = 'ng-katex';
   url: string = 'https://github.com/garciparedes/ng-katex';
   equation: string = 'c = \\pm\\sqrt{a^2 + b^2}';
-  options: any = {
+  options: KatexOptions = {
     displayMode: true,
   };
 }

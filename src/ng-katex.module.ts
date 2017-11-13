@@ -16,4 +16,4 @@ import { KatexComponent } from './ng-katex.component';
     KatexComponent,
   ],
 })
-export class KatexModule { }
+export class KatexModule {}

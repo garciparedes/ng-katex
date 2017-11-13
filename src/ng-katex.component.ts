@@ -1,20 +1,27 @@
-import { Component, Input, Output, ViewEncapsulation,EventEmitter } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ViewEncapsulation,
+} from '@angular/core';
+import * as ko from './ng-katex.options';
 
 @Component({
   selector: 'ng-katex',
   template: `
     <span [katex]="equation"
-      [katex-options]="options"
-      (someEvent)="hasError($event)">
+          [katex-options]="options"
+          (someEvent)="hasError($event)">
     </span>
   `,
   styleUrls: ['../node_modules/katex/dist/katex.min.css'],
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.Native,
 })
 export class KatexComponent {
 
   @Input() equation: string;
-  @Input() options?: any;
+  @Input() options?: ko.KatexOptions;
   @Output() onError = new EventEmitter<any>();
 
   hasError(error) {
