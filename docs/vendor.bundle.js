@@ -13223,7 +13223,7 @@ function __metadata(k, v) {
 var KatexService = (function () {
     function KatexService() {
     }
-    KatexService.prototype.render = function (equation, element, options) {
+    KatexService.render = function (equation, element, options) {
         return Object(__WEBPACK_IMPORTED_MODULE_1_katex__["render"])(equation, element.nativeElement, options);
     };
     KatexService.prototype.renderToString = function (equation, options) {

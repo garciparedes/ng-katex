@@ -1,8 +1,14 @@
-import { Directive, ElementRef, Input,Output, EventEmitter } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { KatexService } from './ng-katex.service';
 
 @Directive({
-  selector: '[katex]'
+  selector: '[katex]',
 })
 export class KatexDirective {
 
@@ -12,10 +18,10 @@ export class KatexDirective {
   @Output() onError = new EventEmitter<any>();
 
   constructor(private el: ElementRef,
-              private katexService: KatexService) { }
+              private katexService: KatexService) {}
 
   ngOnChanges() {
-    try{
+    try {
       this.katexService.render(this.equation, this.el, this.options);
     } catch (e) {
       this.onError.emit(e);

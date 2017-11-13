@@ -20,12 +20,17 @@ To add the module to your proyect add the `KatexModule` to `import`'s field of y
 ```js
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
 
 import { KatexModule } from 'ng-katex';
 
+import { AppComponent } from './app/app.component';
+
+
 @NgModule({
-  imports: [BrowserModule, KatexModule],
+  imports: [
+    BrowserModule, 
+    KatexModule
+  ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
