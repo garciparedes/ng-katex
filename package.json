@@ -1,6 +1,6 @@
 {
   "name": "ng-katex",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library",
   "main": "ng-katex.umd.js",
   "jsnext:main": "ng-katex.esm.js",
@@ -61,7 +61,7 @@
     "rollup-plugin-angular": "^0.5.3",
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-typescript2": "^0.8.0",
     "typescript": "2.4.2"
   }
 }

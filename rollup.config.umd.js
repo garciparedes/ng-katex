@@ -1,7 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import angular from 'rollup-plugin-angular';
-import typescript from 'rollup-plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 var sass = require('node-sass');
 import { nameLibrary, PATH_SRC, PATH_DIST } from './config.js';
 export default {

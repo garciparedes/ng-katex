@@ -23,3 +23,4 @@ npm-debug.log
 testem.log
 /.chrome
 /.git
+/.rpt2_cache
