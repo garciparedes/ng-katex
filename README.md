@@ -51,6 +51,21 @@ export class AppComponent {
 
 You can add options to `ng-katex` components with:
 
+```js
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `<ng-katex [equation]="equation" [options]=options>`
+})
+export class AppComponent {
+  equation: string = ''\sum_{i=1}^nx_i'';
+  options: any = {
+    displayMode: true,
+  };
+}
+```
+
 The `options` object structure is defined [here](https://github.com/Khan/KaTeX#rendering-options).
 
 ## Contributors
