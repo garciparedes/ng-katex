@@ -5,7 +5,7 @@ import typescript from 'rollup-plugin-typescript2';
 var sass = require('node-sass');
 import { nameLibrary, PATH_SRC, PATH_DIST } from './config.js';
 export default {
-  input: PATH_SRC + nameLibrary+'.ts',
+  input: PATH_SRC + nameLibrary + '.ts',
   output: {
     format: 'umd',
     file: PATH_DIST + nameLibrary + ".umd.js",
