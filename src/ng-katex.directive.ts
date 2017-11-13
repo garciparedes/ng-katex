@@ -16,7 +16,7 @@ export class KatexDirective {
 
   ngOnChanges() {
     try{
-      this.katexService.renderExpression(this.equation, this.el, this.options);
+      this.katexService.render(this.equation, this.el, this.options);
     } catch (e) {
       this.onError.emit(e);
     }
