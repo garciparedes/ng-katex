@@ -5,6 +5,7 @@ import {
   Output,
   ViewEncapsulation,
 } from '@angular/core';
+import * as ko from './ng-katex.options';
 
 @Component({
   selector: 'ng-katex',
@@ -20,7 +21,7 @@ import {
 export class KatexComponent {
 
   @Input() equation: string;
-  @Input() options?: any;
+  @Input() options?: ko.KatexOptions;
   @Output() onError = new EventEmitter<any>();
 
   hasError(error) {

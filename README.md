@@ -59,13 +59,15 @@ You can add options to `ng-katex` components with:
 ```js
 import { Component } from '@angular/core';
 
+import { KatexOptions } from 'ng-katex';
+
 @Component({
   selector: 'my-app',
   template: `<ng-katex [equation]="equation" [options]=options>`
 })
 export class AppComponent {
   equation: string = ''\sum_{i=1}^nx_i'';
-  options: any = {
+  options: KatexOptions = {
     displayMode: true,
   };
 }

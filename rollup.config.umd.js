@@ -38,10 +38,7 @@ export default {
     typescript({
       typescript:require('typescript')
     }),
-    resolve({
-      module: true,
-      main: true
-    }),
+    resolve(),
     commonjs({
       include: 'node_modules/**',
     })
