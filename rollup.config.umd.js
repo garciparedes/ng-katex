@@ -3,7 +3,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import angular from 'rollup-plugin-angular';
 import typescript from 'rollup-plugin-typescript';
 var sass = require('node-sass');
-import { nameLibrary, PATH_SRC, PATH_DIST} from './config-library.js';
+import { nameLibrary, PATH_SRC, PATH_DIST } from './config.js';
 export default {
   input: PATH_SRC + nameLibrary+'.ts',
   output: {
