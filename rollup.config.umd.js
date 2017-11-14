@@ -2,7 +2,17 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import angular from 'rollup-plugin-angular';
 import typescript from 'rollup-plugin-typescript2';
-var sass = require('node-sass');
+
+import sass from 'node-sass';
+import CleanCSS from 'clean-css';
+
+const cssmin = new CleanCSS();
+const htmlminOpts = {
+    caseSensitive: true,
+    collapseWhitespace: true,
+    removeComments: true,
+};
+
 import { nameLibrary, PATH_SRC, PATH_DIST } from './config.js';
 export default {
   input: PATH_SRC + nameLibrary + '.ts',
@@ -21,17 +31,10 @@ export default {
   plugins: [
     angular(
       {
+        replace: true,
         preprocessors:{
-          template: template => template,
-          style: scss => {
-            let css;
-            if(scss){
-              css = sass.renderSync({ data: scss }).css.toString();
-            }else{
-              css = '';
-            }
-            return css;
-          },
+          template: template =>  minifyHtml(template, htmlminOpts),
+          style: scss => cssmin.minify(sass.renderSync({ data: scss }).css).styles
         }
       }
     ),
@@ -40,7 +43,7 @@ export default {
     }),
     resolve(),
     commonjs({
-      include: 'node_modules/**',
+      include: 'node_modules/**'
     })
   ],
   onwarn: warning => {
