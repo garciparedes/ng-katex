@@ -1,4 +1,7 @@
 {
+  "angularCompilerOptions": {
+    "genDir": "dist"
+  },
   "compilerOptions": {
     "baseUrl":".",
     "target": "es5",
