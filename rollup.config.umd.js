@@ -38,9 +38,7 @@ export default {
         }
       }
     ),
-    typescript({
-      typescript:require('typescript')
-    }),
+    typescript(),
     resolve(),
     commonjs({
       include: 'node_modules/**'

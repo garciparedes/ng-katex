@@ -15,7 +15,7 @@ import * as ko from './ng-katex.options';
           (someEvent)="hasError($event)">
     </span>
   `,
-  styleUrls: ['./../node_modules/katex/dist/katex.css'],
+  styleUrls: ['./../node_modules/katex/dist/katex.min.css'],
   encapsulation: ViewEncapsulation.Native,
 })
 export class KatexComponent {
