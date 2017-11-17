@@ -71,7 +71,7 @@ THE SOFTWARE.
 MIT
 MIT
 
-ng-katex@0.3.34
+ng-katex@0.3.35
 MIT
 MIT
 
