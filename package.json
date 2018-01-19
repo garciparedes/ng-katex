@@ -56,15 +56,15 @@
     "@angular/core": "^4.4.6",
     "clean-css": "^4.1.9",
     "del": "^3.0.0",
-    "node-sass": "^4.6.1",
+    "node-sass": "^4.7.2",
     "rimraf": "^2.6.2",
     "rollup": "^0.50.1",
     "rollup-plugin-angular": "^0.5.3",
     "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-typescript2": "^0.8.0",
-    "rxjs": "^5.5.2",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-typescript2": "^0.8.4",
+    "rxjs": "^5.5.6",
     "typescript": "2.3.4",
-    "zone.js": "^0.8.18"
+    "zone.js": "^0.8.20"
   }
 }
