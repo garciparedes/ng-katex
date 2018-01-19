@@ -1,15 +1,15 @@
 {
   "name": "ng-katex",
-  "version": "0.3.37",
+  "version": "0.4.0",
   "description": "Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library",
   "main": "ng-katex.umd.js",
   "jsnext:main": "ng-katex.esm.js",
   "module": "ng-katex.esm.js",
   "types": "ng-katex.d.ts",
   "scripts": {
-    "copy": "node tools/copier.js && node tools/cleaner.js",
+    "copy": "node tools/copier.js && node tools/cleaner.js && bash tools/path-fixer.sh dist/",
     "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc && ngc",
-    "postbundle": "node tools/remover.js",
+    "postbundle": "bash tools/file-remover.sh && bash tools/path-fixer.sh",
     "build": "npm run bundle && npm run copy",
     "publish": "cd ./dist && npm publish",
     "ngc": "ngc"

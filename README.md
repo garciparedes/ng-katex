@@ -79,6 +79,9 @@ The `options` object structure is defined [here](https://github.com/Khan/KaTeX#r
 
 - Sergio García Prado [@garciparedes](https://garciparedes.me)
 
+## Changelog
+See [changelog](https://github.com/garciparedes/ng-katex/releases) page to get info about release changes.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
