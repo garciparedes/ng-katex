@@ -50,7 +50,7 @@ import { Component } from '@angular/core';
   template: `<ng-katex [equation]="equation"></ng-katex>`
 })
 export class AppComponent {
-  equation: string = '\sum_{i=1}^nx_i';
+  equation: string = '\\sum_{i=1}^nx_i';
 }
 ```
 
@@ -66,7 +66,7 @@ import { KatexOptions } from 'ng-katex';
   template: `<ng-katex [equation]="equation" [options]=options></ng-katex>`
 })
 export class AppComponent {
-  equation: string = '\sum_{i=1}^nx_i';
+  equation: string = '\\sum_{i=1}^nx_i';
   options: KatexOptions = {
     displayMode: true,
   };
