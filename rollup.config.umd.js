@@ -1,5 +1,3 @@
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
 import angular from 'rollup-plugin-angular';
 import typescript from 'rollup-plugin-typescript2';
 
@@ -25,8 +23,6 @@ export default {
   external: [
     '@angular/core',
     'katex',
-    'rxjs',
-    'zone.js'
   ],
   plugins: [
     angular(
@@ -38,15 +34,10 @@ export default {
         }
       }
     ),
-    typescript(),
-    resolve(),
-    commonjs({
-      include: 'node_modules/**'
-    })
+    typescript()
   ],
   onwarn: warning => {
     const skip_codes = [
-      'THIS_IS_UNDEFINED',
       'MISSING_GLOBAL_NAME'
     ];
     if (skip_codes.indexOf(warning.code) != -1) return;
