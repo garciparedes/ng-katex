@@ -1,6 +1,7 @@
 import angular from 'rollup-plugin-angular';
 import typescript from 'rollup-plugin-typescript2';
 import copy from 'rollup-plugin-copy';
+import uglify from 'rollup-plugin-uglify';
 
 import sass from 'node-sass';
 import CleanCSS from 'clean-css';
@@ -31,7 +32,9 @@ export default {
         replace: true,
         preprocessors:{
           template: template =>  minifyHtml(template, htmlminOpts),
-          style: scss => cssmin.minify(sass.renderSync({ data: scss }).css).styles
+          style: scss => cssmin.minify(
+            sass.renderSync({ data: scss }).css
+          ).styles
         }
       }
     ),
@@ -39,7 +42,8 @@ export default {
     copy({
       "readme.md": "dist/readme.md",
       "package.json": "dist/package.json"
-    })
+    }),
+    uglify(),
   ],
   onwarn: warning => {
     const skip_codes = [
