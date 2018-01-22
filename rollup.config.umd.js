@@ -1,5 +1,6 @@
 import angular from 'rollup-plugin-angular';
 import typescript from 'rollup-plugin-typescript2';
+import copy from 'rollup-plugin-copy';
 
 import sass from 'node-sass';
 import CleanCSS from 'clean-css';
@@ -15,11 +16,11 @@ import { nameLibrary, PATH_SRC, PATH_DIST } from './config.js';
 export default {
   input: PATH_SRC + nameLibrary + '.ts',
   output: {
+    name: nameLibrary,
     format: 'umd',
     file: PATH_DIST + nameLibrary + ".umd.js",
+    sourcemap: true,
   },
-  name: nameLibrary,
-  sourcemap: true,
   external: [
     '@angular/core',
     'katex',
@@ -34,7 +35,11 @@ export default {
         }
       }
     ),
-    typescript()
+    typescript(),
+    copy({
+      "readme.md": "dist/readme.md",
+      "package.json": "dist/package.json"
+    })
   ],
   onwarn: warning => {
     const skip_codes = [
