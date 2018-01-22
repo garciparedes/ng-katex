@@ -1,7 +1,7 @@
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
 import angular from 'rollup-plugin-angular';
 import typescript from 'rollup-plugin-typescript2';
+import copy from 'rollup-plugin-copy';
+import uglify from 'rollup-plugin-uglify';
 
 import sass from 'node-sass';
 import CleanCSS from 'clean-css';
@@ -17,16 +17,14 @@ import { nameLibrary, PATH_SRC, PATH_DIST } from './config.js';
 export default {
   input: PATH_SRC + nameLibrary + '.ts',
   output: {
+    name: nameLibrary,
     format: 'umd',
     file: PATH_DIST + nameLibrary + ".umd.js",
+    sourcemap: true,
   },
-  name: nameLibrary,
-  sourcemap: true,
   external: [
     '@angular/core',
     'katex',
-    'rxjs',
-    'zone.js'
   ],
   plugins: [
     angular(
@@ -34,19 +32,21 @@ export default {
         replace: true,
         preprocessors:{
           template: template =>  minifyHtml(template, htmlminOpts),
-          style: scss => cssmin.minify(sass.renderSync({ data: scss }).css).styles
+          style: scss => cssmin.minify(
+            sass.renderSync({ data: scss }).css
+          ).styles
         }
       }
     ),
     typescript(),
-    resolve(),
-    commonjs({
-      include: 'node_modules/**'
-    })
+    copy({
+      "readme.md": "dist/readme.md",
+      "package.json": "dist/package.json"
+    }),
+    uglify(),
   ],
   onwarn: warning => {
     const skip_codes = [
-      'THIS_IS_UNDEFINED',
       'MISSING_GLOBAL_NAME'
     ];
     if (skip_codes.indexOf(warning.code) != -1) return;
