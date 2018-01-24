@@ -1,10 +1,19 @@
 h1 {
   text-align: center;
 }
-input {
+
+input,
+textarea {
   width: 100%;
 }
-ng-katex { font-size: 1.5em; }
+
+textarea {
+  resize: vertical;
+}
+
+ng-katex {
+  font-size: 1.5em;
+}
 
 a {
   color: #329894;
