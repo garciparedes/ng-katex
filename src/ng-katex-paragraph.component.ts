@@ -25,7 +25,7 @@ export class KatexParagraphComponent {
     this.onError.emit(error);
   }
 
-  private splitParagraph(paragraph: string): Array<string> {
+  splitParagraph(paragraph: string): Array<string> {
     return paragraph.split(KatexParagraphComponent.splitRegex).filter(x => x)
   }
 
@@ -40,7 +40,6 @@ export class KatexParagraphComponent {
   }
 
   private clean(s: string): string {
-    console.log(s.match(/(\${1,2})((?:\\.|[^\$])+)\1/)[2]);
     return s.match(/(\${1,2})((?:\\.|[^\$])+)\1/)[2];
   }
 }

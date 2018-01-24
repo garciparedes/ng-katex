@@ -9,7 +9,7 @@
     "test": "ng test --preserve-symlinks",
     "lint": "ng lint --preserve-symlinks",
     "e2e": "ng e2e --preserve-symlinks",
-    "publish": "ng build --preserve-symlinks --prod --base-href ng-katex && cp -R ./dist/ ./../docs "
+    "publish": "ng build --preserve-symlinks --prod --base-href ng-katex && rm -rf ./../docs  && cp -R -p ./dist/ ./../docs"
   },
   "private": true,
   "dependencies": {
