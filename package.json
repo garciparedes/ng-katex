@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@angular/compiler": "4.4.6",
-    "@angular/compiler-cli": "4.4.6",
+    "@angular/compiler-cli": "5.2.2",
     "@angular/core": "4.4.6",
     "clean-css": "4.1.9",
     "node-sass": "4.7.2",
