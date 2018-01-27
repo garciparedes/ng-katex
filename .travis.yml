@@ -7,11 +7,7 @@ branches:
     - master
 
 before_script:
-  - npm install codecov -g
   - npm install
-  
-after_success:
-  - codecov
 
 script:
   - npm run-script build
