@@ -1,6 +1,7 @@
 # ng-KaTeX
 
 [![npm](https://img.shields.io/npm/v/ng-katex.svg)](https://www.npmjs.com/package/ng-katex)
+[![Travis](https://img.shields.io/travis/garciparedes/ng-katex.svg)]()
 [![npm](https://img.shields.io/npm/l/ng-katex.svg)](LICENSE)
 
 ## Description
