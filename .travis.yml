@@ -10,7 +10,7 @@ before_script:
   - npm install
 
 script:
-  - ng build --prod
+  - npm run-script build
 
 notifications:
   email:
