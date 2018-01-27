@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/ng-katex.svg)](https://www.npmjs.com/package/ng-katex)
 [![Travis](https://img.shields.io/travis/garciparedes/ng-katex.svg)](https://travis-ci.org/garciparedes/ng-katex)
+[![Codecov](https://img.shields.io/codecov/c/github/garciparedes/ng-katex.svg)](https://codecov.io/gh/garciparedes/ng-katex)
 [![npm](https://img.shields.io/npm/l/ng-katex.svg)](LICENSE)
 
 ## Description
