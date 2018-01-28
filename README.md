@@ -75,7 +75,7 @@ import { KatexOptions } from 'ng-katex';
 
 @Component({
   selector: 'my-app',
-  template: `<ng-katex [equation]="equation" [options]=options></ng-katex>`
+  template: `<ng-katex [equation]="equation" [options]="options"></ng-katex>`
 })
 export class AppComponent {
   equation: string = '\\sum_{i=1}^nx_i';

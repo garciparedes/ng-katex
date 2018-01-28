@@ -4,12 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "publish": "ng build --prod --base-href ng-katex && rm -rf ./../docs/ && cp -R -p ./dist/ ./../docs "
+    "start": "ng serve --preserve-symlinks",
+    "build": "ng build --preserve-symlinks",
+    "test": "ng test --preserve-symlinks",
+    "lint": "ng lint --preserve-symlinks",
+    "e2e": "ng e2e --preserve-symlinks",
+    "publish": "ng build --preserve-symlinks --prod --base-href ng-katex && rm -rf ./../docs && cp -R -p ./dist/ ./../docs "
   },
   "private": true,
   "dependencies": {
@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "5.2.2",
     "@angular/router": "5.2.2",
     "core-js": "2.5.3",
-    "ng-katex": "1.0.1",
+    "ng-katex": "file:../dist",
     "node-sass": "4.7.2",
     "rxjs": "5.5.6",
     "zone.js": "0.8.20"
