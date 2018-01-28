@@ -15,7 +15,7 @@ export class KatexParagraphComponent {
 
   private static readonly DISPLAY_MODE: number = 1;
   private static readonly INLINE_MODE: number = 2;
-  private static readonly splitRegex = /(\$(?:\\.|[^\$])+\$)|(\$\$(?:\\.|[^\$])+\$\$)/g
+  private static readonly splitRegex = /(\$(?:\\\$|[^\$])+\$)|(\$\$(?:\\\$|[^\$])+\$\$)/g
 
 
   @Input() paragraph: string;
@@ -30,9 +30,9 @@ export class KatexParagraphComponent {
   }
 
   private classify(s: string): number {
-    if (s.match(/(?:\$\$((?:\\.|[^\$])+)\$\$)/)) {
+    if (s.match(/(?:\$\$((?:\\\$|[^\$])+)\$\$)/)) {
       return 1;
-    } else if (s.match(/(?:\$((?:\\.|[^\$])+)\$)/)) {
+    } else if (s.match(/(?:\$((?:\\\$|[^\$])+)\$)/)) {
       return 2;
     } else {
       return 0;
@@ -40,6 +40,6 @@ export class KatexParagraphComponent {
   }
 
   private clean(s: string): string {
-    return s.match(/(\${1,2})((?:\\.|[^\$])+)\1/)[2];
+    return s.match(/(\${1,2})((?:\\\$|[^\$])+)\1/)[2];
   }
 }
