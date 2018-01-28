@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "6.9"
+
+branches:
+  only:
+    - master
+
+before_script:
+  - npm install
+
+script:
+  - npm run-script build
+
+notifications:
+  email:
+    on_failure: change

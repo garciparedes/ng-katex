@@ -46,8 +46,8 @@ export default {
     ),
     typescript(),
     copy({
-      "readme.md": "dist/readme.md",
-      "package.json": "dist/package.json"
+      "README.md": "./dist/README.md",
+      "package.json": "./dist/package.json"
     }),
     uglify(),
   ],
