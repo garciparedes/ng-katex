@@ -1,16 +1,10 @@
 {
-  "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "ng-katex",
   "version": "1.0.1",
   "description": "Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library",
-  "ngPackage": {
-    "lib": {
-      "entryFile": "./src/ng-katex.ts"
-    }
-  },
   "scripts": {
     "start": "npm run-script build && cd demo && npm start",
-    "build": "ng-packagr -p package.json",
+    "build": "ng-packagr -p ng-package.json",
     "build-demo": "npm run-script build && cd demo && npm install && npm run-script publish",
     "publish": "npm publish dist"
   },
