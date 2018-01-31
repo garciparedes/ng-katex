@@ -10,5 +10,7 @@
   <p><ng-katex [equation]="equation" [options]="options"></ng-katex></p>
 
   <h2>Paragraph: </h2>
-  <p>In progress <a target="_blank" href="https://github.com/garciparedes/ng-katex/issues/22">here</a>.</p>
+  <p>Type here your paragraph:</p>
+  <p><textarea  [(ngModel)]="paragraph" rows="6"></textarea></p>
+  <ng-katex-paragraph [paragraph]="paragraph"></ng-katex-paragraph>
 </div>
