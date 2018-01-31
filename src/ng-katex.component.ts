@@ -9,12 +9,8 @@ import * as ko from './ng-katex.options';
 
 @Component({
   selector: 'ng-katex',
-  template: `
-    <span [katex]="equation"
-          [katex-options]="options"
-          (someEvent)="hasError($event)">
-    </span>
-  `,
+  templateUrl: './ng-katex.component.html',
+  styleUrls: ['./ng-katex.component.scss'],
 })
 export class KatexComponent {
 
