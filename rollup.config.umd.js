@@ -23,13 +23,11 @@ export default {
     sourcemap: true,
     globals: {
       '@angular/core': '@angular/core',
-      '@angular/common': '@angular/common',
       'katex': 'katex',
     },
   },
   external: [
     '@angular/core',
-    '@angular/common',
     'katex',
   ],
   plugins: [
