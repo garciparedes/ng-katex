@@ -4,7 +4,7 @@
   "description": "Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library",
   "scripts": {
     "start": "npm run-script build && cd demo && npm start",
-    "build": "ng-packagr -p ng-package.json",
+    "build": "rimraf dist && ng-packagr -p package.json",
     "build-demo": "npm run-script build && cd demo && npm install && npm run-script publish",
     "publish": "npm publish dist"
   },
@@ -46,11 +46,23 @@
     "@angular/common": ">=4.0.0"
   },
   "devDependencies": {
-    "@angular/common": "4.4.6",
-    "@angular/core": "4.4.6",
-    "ng-packagr": "1.6.0",
+    "@angular/common": "5.2.3",
+    "@angular/compiler": "5.2.3",
+    "@angular/compiler-cli": "5.2.3",
+    "@angular/core": "5.2.3",
+    "ng-packagr": "2.0.0-rc.12",
+    "rimraf": "2.6.2",
     "rxjs": "5.5.6",
-    "typescript": "2.4.0",
+    "tsickle": "0.26.0",
+    "typescript": "2.6.2",
     "zone.js": "0.8.20"
+  },
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "workingDirectory": ".ng_pkg_build",
+    "lib": {
+      "entryFile": "./src/ng-katex.ts"
+    },
+    "dest": "dist"
   }
 }
