@@ -24,3 +24,4 @@ testem.log
 /.chrome
 /.git
 /.rpt2_cache
+/.ng_pkg_build
