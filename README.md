@@ -8,7 +8,7 @@
 
 
 ## Description
-Angular module to write beautiful math expressions with TeX syntax boosted by [KaTeX](https://github.com/Khan/KaTeX) library.
+Angular module to write beautiful math expressions in TeX syntax boosted by [KaTeX](https://github.com/Khan/KaTeX) library.
 You can see a demo [here](https://garciparedes.github.io/ng-katex).
 
 ## Install
