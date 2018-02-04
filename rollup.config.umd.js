@@ -21,6 +21,10 @@ export default {
     format: 'umd',
     file: PATH_DIST + nameLibrary + ".umd.js",
     sourcemap: true,
+    globals: {
+      '@angular/core': '@angular/core',
+      'katex': 'katex',
+    },
   },
   external: [
     '@angular/core',
@@ -46,10 +50,6 @@ export default {
     uglify(),
   ],
   onwarn: warning => {
-    const skip_codes = [
-      'MISSING_GLOBAL_NAME'
-    ];
-    if (skip_codes.indexOf(warning.code) != -1) return;
     console.error(warning);
   }
 };

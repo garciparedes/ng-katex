@@ -2,10 +2,13 @@
 
 [![npm](https://img.shields.io/npm/v/ng-katex.svg)](https://www.npmjs.com/package/ng-katex)
 [![Travis](https://img.shields.io/travis/garciparedes/ng-katex.svg)](https://travis-ci.org/garciparedes/ng-katex)
-[![npm](https://img.shields.io/npm/l/ng-katex.svg)](LICENSE)
+[![npm](https://img.shields.io/npm/dy/ng-katex.svg)](https://www.npmjs.com/package/ng-katex)
+[![GitHub stars](https://img.shields.io/github/stars/garciparedes/ng-katex.svg)](https://github.com/garciparedes/ng-katex)
+[![npm](https://img.shields.io/npm/l/ng-katex.svg)](https://github.com/garciparedes/ng-katex/blob/master/README.md)
+
 
 ## Description
-Angular module to write beautiful math expressions with TeX syntax boosted by [KaTeX](https://github.com/Khan/KaTeX) library.
+Angular module to write beautiful math expressions in TeX syntax boosted by [KaTeX](https://github.com/Khan/KaTeX) library.
 You can see a demo [here](https://garciparedes.github.io/ng-katex).
 
 ## Install
@@ -75,7 +78,7 @@ import { KatexOptions } from 'ng-katex';
 
 @Component({
   selector: 'my-app',
-  template: `<ng-katex [equation]="equation" [options]=options></ng-katex>`
+  template: `<ng-katex [equation]="equation" [options]="options"></ng-katex>`
 })
 export class AppComponent {
   equation: string = '\\sum_{i=1}^nx_i';
@@ -100,4 +103,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
-ng-katex is licensed under the [MIT](LICENSE).
+ng-katex is licensed under [MIT](LICENSE) license.

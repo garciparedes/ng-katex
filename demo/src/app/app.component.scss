@@ -1,12 +1,21 @@
-p, h1 {
+h1 {
   text-align: center;
 }
+
 input {
-  width: 60%;
+  width: 100%;
 }
-ng-katex { font-size: 1.5em; }
+
+ng-katex {
+  font-size: 1.5em;
+}
 
 a {
   color: #329894;
   text-decoration: none;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
 }
