@@ -10,7 +10,7 @@ before_script:
   - npm install
 
 script:
-  - npm run-script build-demo
+  - npm run-script build:demo
 
 notifications:
   email:
