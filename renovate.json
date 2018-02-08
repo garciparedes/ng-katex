@@ -1,5 +1,11 @@
 {
   "extends": [
     "config:base"
+  ],
+  "pathRules": [
+    {
+      "paths": ["demo/**"],
+      "branchPrefix": ["renovate/demo-"]
+    }
   ]
 }
