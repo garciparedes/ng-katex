@@ -20,7 +20,7 @@
     "@angular/http": "5.2.3",
     "@angular/platform-browser": "5.2.4",
     "@angular/platform-browser-dynamic": "5.2.4",
-    "@angular/router": "5.2.3",
+    "@angular/router": "5.2.4",
     "core-js": "2.5.3",
     "ng-katex": "file:../dist",
     "node-sass": "4.7.2",
