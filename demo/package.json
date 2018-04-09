@@ -25,7 +25,7 @@
     "ng-katex": "file:../dist",
     "node-sass": "4.8.3",
     "rxjs": "5.5.8",
-    "zone.js": "0.8.20"
+    "zone.js": "0.8.26"
   },
   "devDependencies": {
     "@angular/cli": "1.7.4",
