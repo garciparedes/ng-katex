@@ -21,7 +21,7 @@
     "@angular/platform-browser": "5.2.9",
     "@angular/platform-browser-dynamic": "5.2.9",
     "@angular/router": "5.2.9",
-    "core-js": "2.5.4",
+    "core-js": "2.5.5",
     "ng-katex": "file:../dist",
     "node-sass": "4.8.3",
     "rxjs": "5.5.8",
