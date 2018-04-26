@@ -58,7 +58,7 @@
     "@angular/common": "4.4.6",
     "@angular/core": "4.4.6",
     "clean-css": "4.1.11",
-    "node-sass": "4.8.3",
+    "node-sass": "4.9.0",
     "rimraf": "2.6.2",
     "rollup": "0.58.2",
     "rollup-plugin-angular": "0.5.3",
