@@ -60,7 +60,7 @@
     "clean-css": "4.1.11",
     "node-sass": "4.9.0",
     "rimraf": "2.6.2",
-    "rollup": "0.59.4",
+    "rollup": "0.60.4",
     "rollup-plugin-angular": "0.5.3",
     "rollup-plugin-copy": "0.2.3",
     "rollup-plugin-typescript2": "0.14.0",
