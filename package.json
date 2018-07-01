@@ -65,7 +65,8 @@
     "rollup-plugin-copy": "0.2.3",
     "rollup-plugin-typescript2": "0.15.1",
     "rollup-plugin-uglify": "3.0.0",
-    "rxjs": "5.5.11",
+    "rxjs": "6.2.1",
+    "rxjs-compat": "^6.2.1",
     "typescript": "2.7.2",
     "zone.js": "0.8.26"
   }
