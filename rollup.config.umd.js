@@ -1,7 +1,7 @@
 import angular from 'rollup-plugin-angular';
 import typescript from 'rollup-plugin-typescript2';
 import copy from 'rollup-plugin-copy';
-import uglify from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 
 import sass from 'node-sass';
 import CleanCSS from 'clean-css';
