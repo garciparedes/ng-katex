@@ -1,16 +1,17 @@
+dist: trusty
 language: node_js
 node_js:
-  - "6.9"
+  - "9"
 
-branches:
-  only:
-    - master
+cache:
+  directories:
+    - node_modules
 
 before_script:
   - npm install
 
 script:
-  - npm run-script build-demo
+  - npm run-script build:demo
 
 notifications:
   email:
