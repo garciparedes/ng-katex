@@ -9,12 +9,12 @@ import * as ko from './ng-katex.options';
             [ngSwitch]="classify(part)">
 
         <ng-katex *ngSwitchCase="DISPLAY_MODE"
-                  [equation]="clean(part)" [options]="options"></ng-katex>
+                  [equation]="extractEquation(part)" [options]="options"></ng-katex>
 
         <ng-katex *ngSwitchCase="INLINE_MODE"
-                  [equation]="clean(part)"></ng-katex>
+                  [equation]="extractEquation(part)"></ng-katex>
 
-        <span *ngSwitchDefault>{{ part }}</span>
+        <span *ngSwitchDefault>{{ extractParagraph(part) }}</span>
 
       </span>
     </p>
@@ -59,7 +59,11 @@ export class KatexParagraphComponent {
     }
   }
 
-  private clean(s: string): string {
+  private extractEquation(s: string): string {
     return s.match(this.cleanRe)[2];
+  }
+
+  private extractParagraph(s: string): string {
+    return s;
   }
 }
