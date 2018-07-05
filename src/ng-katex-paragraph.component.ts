@@ -26,7 +26,7 @@ export class KatexParagraphComponent {
   private readonly INLINE_MODE: number = 2;
 
 
-  private readonly splitRe = /(\$(?:\\\$|[^\$])+\$)|(\$\$(?:\\\$|[^\$])+\$\$)/g;
+  private readonly splitRe = /((?<!\\)\$(?:\\\$|[^\$])+\$(?<!\\))|((?<!\\)\$\$(?:\\\$|[^\$])+\$\$(?<!\\))/g;
 
   private readonly matchDisplayRe = /(?:\$\$((?:\\\$|[^\$])+)\$\$)/;
   private readonly matchInlineRe = /(?:\$((?:\\\$|[^\$])+)\$)/;
@@ -64,6 +64,6 @@ export class KatexParagraphComponent {
   }
 
   private extractParagraph(s: string): string {
-    return s;
+    return s.replace("\\$", "$");
   }
 }
