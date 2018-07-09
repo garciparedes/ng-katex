@@ -26,12 +26,12 @@ export class KatexParagraphComponent {
   private readonly INLINE_MODE: number = 2;
 
 
-  private readonly splitRe = /((?<!\\)\$(?:\\\$|[^\$])+\$(?<!\\))|((?<!\\)\$\$(?:\\\$|[^\$])+\$\$(?<!\\))/g;
+  private readonly splitRe = /((?<!\\)\$(?:\\\$|[^\$])+(?<!\\)\$)|((?<!\\)\$(?<!\\)\$(?:\\\$|[^\$])+(?<!\\)\$(?<!\\)\$)/g;
 
-  private readonly matchDisplayRe = /(?:\$\$((?:\\\$|[^\$])+)\$\$)/;
-  private readonly matchInlineRe = /(?:\$((?:\\\$|[^\$])+)\$)/;
+  private readonly matchDisplayRe = /(?:\$\$((?:\\\$|[^\$])+)\$\$)/g;
+  private readonly matchInlineRe = /(?:\$((?:\\\$|[^\$])+)\$)/g;
 
-  private readonly cleanRe = /(\${1,2})((?:\\\$|[^\$])+)\1/
+  private readonly cleanRe = /(\${1,2})((?:\\\$|[^\$])+)\1/g;
 
 
   private readonly options: ko.KatexOptions = {
