@@ -1,7 +1,8 @@
 import angular from 'rollup-plugin-angular';
 import typescript from 'rollup-plugin-typescript2';
 import copy from 'rollup-plugin-copy';
-import uglify from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
+import { minify } from 'uglify-es';
 
 import sass from 'node-sass';
 import CleanCSS from 'clean-css';
@@ -49,7 +50,7 @@ export default {
       "README.md": "./dist/README.md",
       "package.json": "./dist/package.json"
     }),
-    uglify(),
+    uglify({}, minify),
   ],
   onwarn: warning => {
     console.error(warning);
