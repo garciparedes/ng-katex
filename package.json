@@ -67,7 +67,7 @@
     "rollup-plugin-uglify": "4.0.0",
     "rxjs": "6.2.1",
     "rxjs-compat": "6.2.1",
-    "typescript": "2.7.2",
+    "typescript": "2.9.2",
     "uglify-es": "3.3.9",
     "zone.js": "0.8.26"
   }
