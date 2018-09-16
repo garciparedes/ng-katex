@@ -64,7 +64,7 @@
     "rollup-plugin-angular": "0.5.3",
     "rollup-plugin-copy": "0.2.3",
     "rollup-plugin-typescript2": "0.16.1",
-    "rollup-plugin-uglify": "4.0.0",
+    "rollup-plugin-uglify": "5.0.2",
     "rxjs": "6.2.2",
     "rxjs-compat": "6.2.2",
     "typescript": "2.9.2",
