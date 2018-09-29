@@ -4,20 +4,20 @@ import * as ko from './ng-katex.options';
 @Component({
   selector: 'ng-katex-paragraph',
   template: `
-    <p>
-      <span *ngFor="let part of splitParagraph(paragraph)"
-            [ngSwitch]="classify(part)">
+  <p>
+  <span *ngFor="let part of splitParagraph(paragraph)"
+  [ngSwitch]="classify(part)">
 
-        <ng-katex *ngSwitchCase="DISPLAY_MODE"
-                  [equation]="extractEquation(part)" [options]="options"></ng-katex>
+  <ng-katex *ngSwitchCase="DISPLAY_MODE"
+  [equation]="extractEquation(part)" [options]="options"></ng-katex>
 
-        <ng-katex *ngSwitchCase="INLINE_MODE"
-                  [equation]="extractEquation(part)"></ng-katex>
+  <ng-katex *ngSwitchCase="INLINE_MODE"
+  [equation]="extractEquation(part)"></ng-katex>
 
-        <span *ngSwitchDefault>{{ extractParagraph(part) }}</span>
+  <span *ngSwitchDefault>{{ extractParagraph(part) }}</span>
 
-      </span>
-    </p>
+  </span>
+  </p>
   `
 })
 export class KatexParagraphComponent {
@@ -28,10 +28,10 @@ export class KatexParagraphComponent {
 
   private readonly splitRe = /((?<!\\)\$(?:\\\$|[^\$])+(?<!\\)\$)|((?<!\\)\$(?<!\\)\$(?:\\\$|[^\$])+(?<!\\)\$(?<!\\)\$)/g;
 
-  private readonly matchDisplayRe = /(?:\$\$((?:\\\$|[^\$])+)\$\$)/g;
-  private readonly matchInlineRe = /(?:\$((?:\\\$|[^\$])+)\$)/g;
+  private readonly matchDisplayRe = /^(?:\$\$((?:\\\$|[^\$])+)\$\$)$/;
+  private readonly matchInlineRe = /^(?:\$((?:\\\$|[^\$])+)\$)$/;
 
-  private readonly cleanRe = /(\${1,2})((?:\\\$|[^\$])+)\1/g;
+  private readonly cleanRe = /(\${1,2})((?:\\\$|[^\$])+)\1/;
 
 
   private readonly options: ko.KatexOptions = {
@@ -46,7 +46,8 @@ export class KatexParagraphComponent {
   }
 
   splitParagraph(paragraph: string): Array<string> {
-    return paragraph.split(this.splitRe).filter(x => x)
+    let splitted = paragraph.split(this.splitRe).filter(x => x);
+    return splitted;
   }
 
   private classify(s: string): number {
@@ -60,10 +61,11 @@ export class KatexParagraphComponent {
   }
 
   private extractEquation(s: string): string {
-    return s.match(this.cleanRe)[2];
+    let exp: string = s.match(this.cleanRe)[2];
+    return exp;
   }
 
   private extractParagraph(s: string): string {
-    return s.replace("\\$", "$");
+    return s.replace(/\\\$/g, "$");
   }
 }
