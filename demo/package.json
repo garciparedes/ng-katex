@@ -25,7 +25,7 @@
     "ng-katex": "file:../dist",
     "node-sass": "4.9.3",
     "rxjs": "6.2.2",
-    "rxjs-compat": "6.2.2",
+    "rxjs-compat": "6.3.3",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
