@@ -95,7 +95,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `  <ng-katex-paragraph [paragraph]="paragraph"></ng-katex-paragraph>`
+  template: `<ng-katex-paragraph [paragraph]="paragraph"></ng-katex-paragraph>`
 })
 export class AppComponent {
   paragraph: string = `
