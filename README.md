@@ -88,6 +88,8 @@ export class AppComponent {
 }
 ```
 
+The `options` object structure is defined [here](https://github.com/Khan/KaTeX#rendering-options).
+
 If you want to write a paragraph with LaTeX equations, you can do it as follows:
 
 ```js
@@ -106,8 +108,6 @@ export class AppComponent {
   `;
 }
 ```
-
-The `options` object structure is defined [here](https://github.com/Khan/KaTeX#rendering-options).
 
 ## Contributors
 
