@@ -5,14 +5,14 @@ import * as ko from './ng-katex.options';
   selector: 'ng-katex-paragraph',
   template: `
   <p>
-  <span *ngFor="let part of splitParagraph(paragraph)"
-  [ngSwitch]="classify(part)">
+  <span *ngFor='let part of splitParagraph(paragraph)'
+  [ngSwitch]='classify(part)'>
 
-  <ng-katex *ngSwitchCase="DISPLAY_MODE"
-  [equation]="extractEquation(part)" [options]="options"></ng-katex>
+  <ng-katex *ngSwitchCase='DISPLAY_MODE'
+  [equation]='extractEquation(part)' [options]='options'></ng-katex>
 
-  <ng-katex *ngSwitchCase="INLINE_MODE"
-  [equation]="extractEquation(part)"></ng-katex>
+  <ng-katex *ngSwitchCase='INLINE_MODE'
+  [equation]='extractEquation(part)'></ng-katex>
 
   <span *ngSwitchDefault>{{ extractParagraph(part) }}</span>
 
@@ -22,17 +22,44 @@ import * as ko from './ng-katex.options';
 })
 export class KatexParagraphComponent {
 
+  private readonly TEXT_MODE: number = 0;
   private readonly DISPLAY_MODE: number = 1;
   private readonly INLINE_MODE: number = 2;
 
+  private readonly boundary: RegExp =  /(?<!\\)\$/;
+  private readonly expression: RegExp = /(?:\\\$|[^\$])+/;
 
-  private readonly splitRe = /((?<!\\)\$(?:\\\$|[^\$])+(?<!\\)\$)|((?<!\\)\$(?<!\\)\$(?:\\\$|[^\$])+(?<!\\)\$(?<!\\)\$)/g;
+  private readonly display: RegExp =  new RegExp(
+    '(' +
+    this.boundary.source + this.boundary.source +
+    this.expression.source +
+    this.boundary.source + this.boundary.source +
+    ')'
+  );
 
-  private readonly matchDisplayRe = /^(?:\$\$((?:\\\$|[^\$])+)\$\$)$/;
-  private readonly matchInlineRe = /^(?:\$((?:\\\$|[^\$])+)\$)$/;
+  private readonly inline: RegExp =  new RegExp(
+    '(' +
+    this.boundary.source  +
+    this.expression.source +
+    this.boundary.source +
+    ')'
+  );
 
-  private readonly cleanRe = /(\${1,2})((?:\\\$|[^\$])+)\1/;
+  private readonly splitRe = new RegExp(
+    this.display.source + '|' + this.inline.source
+  );
 
+  private readonly matchDisplayRe = new RegExp(
+    '^' + this.display.source + '$'
+  );
+
+  private readonly matchInlineRe = new RegExp(
+    '^' + this.inline.source + '$'
+  );
+
+  private readonly cleanRe = new RegExp(
+    '(\\${1,2})(' + this.expression.source +  ')\\1'
+  );
 
   private readonly options: ko.KatexOptions = {
     displayMode: true
@@ -50,22 +77,22 @@ export class KatexParagraphComponent {
     return splitted;
   }
 
-  private classify(s: string): number {
-    if (s.match(this.matchDisplayRe)) {
-      return 1;
-    } else if (s.match(this.matchInlineRe)) {
-      return 2;
+  private classify(text: string): number {
+    if (text.match(this.matchInlineRe)) {
+      return this.INLINE_MODE;
+    } else if (text.match(this.matchDisplayRe)) {
+      return this.DISPLAY_MODE;
     } else {
-      return 0;
+      return this.TEXT_MODE;
     }
   }
 
-  private extractEquation(s: string): string {
-    let exp: string = s.match(this.cleanRe)[2];
+  private extractEquation(text: string): string {
+    let exp: string = text.match(this.cleanRe)[2];
     return exp;
   }
 
-  private extractParagraph(s: string): string {
-    return s.replace(/\\\$/g, "$");
+  private extractParagraph(text: string): string {
+    return text.replace(/\\\$/g, '$');
   }
 }
