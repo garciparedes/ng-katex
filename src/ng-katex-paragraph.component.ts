@@ -22,9 +22,9 @@ import * as ko from './ng-katex.options';
 })
 export class KatexParagraphComponent {
 
+  private readonly DISPLAY_MODE: number = 2;
+  private readonly INLINE_MODE: number = 1;
   private readonly TEXT_MODE: number = 0;
-  private readonly DISPLAY_MODE: number = 1;
-  private readonly INLINE_MODE: number = 2;
 
   private readonly boundary: RegExp =  /(?<!\\)\$/;
   private readonly expression: RegExp = /(?:\\\$|[^\$])+/;
@@ -49,14 +49,6 @@ export class KatexParagraphComponent {
     this.display.source + '|' + this.inline.source
   );
 
-  private readonly matchDisplayRe = new RegExp(
-    '^' + this.display.source + '$'
-  );
-
-  private readonly matchInlineRe = new RegExp(
-    '^' + this.inline.source + '$'
-  );
-
   private readonly cleanRe = new RegExp(
     '(\\${1,2})(' + this.expression.source +  ')\\1'
   );
@@ -78,10 +70,10 @@ export class KatexParagraphComponent {
   }
 
   private classify(text: string): number {
-    if (text.match(this.matchInlineRe)) {
-      return this.INLINE_MODE;
-    } else if (text.match(this.matchDisplayRe)) {
+    if (text.match(this.display)) {
       return this.DISPLAY_MODE;
+    } else if (text.match(this.inline)) {
+      return this.INLINE_MODE;
     } else {
       return this.TEXT_MODE;
     }
