@@ -9,7 +9,7 @@ import * as ko from './ng-katex.options';
   [ngSwitch]='classify(part)'>
 
   <ng-katex *ngSwitchCase='DISPLAY_MODE'
-  [equation]='extractEquation(part)' [options]='options'></ng-katex>
+  [equation]='extractEquation(part)' [options]='displayModeOptions'></ng-katex>
 
   <ng-katex *ngSwitchCase='INLINE_MODE'
   [equation]='extractEquation(part)'></ng-katex>
@@ -53,7 +53,7 @@ export class KatexParagraphComponent {
     '(\\${1,2})(' + this.expression.source +  ')\\1'
   );
 
-  private readonly options: ko.KatexOptions = {
+  private readonly displayModeOptions: ko.KatexOptions = {
     displayMode: true
   };
 
