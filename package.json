@@ -69,6 +69,6 @@
     "rxjs-compat": "6.3.3",
     "typescript": "2.9.2",
     "uglify-es": "3.3.9",
-    "zone.js": "0.8.27"
+    "zone.js": "0.8.28"
   }
 }
