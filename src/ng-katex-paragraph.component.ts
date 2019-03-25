@@ -1,90 +1,25 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import * as ko from './ng-katex.options';
+import { Component, Input } from '@angular/core';
+import { extractMath, Segment } from 'extract-math';
 
 @Component({
   selector: 'ng-katex-paragraph',
   template: `
-  <p>
-  <span *ngFor='let part of splitParagraph(paragraph)'
-  [ngSwitch]='classify(part)'>
-
-  <ng-katex *ngSwitchCase='DISPLAY_MODE'
-  [equation]='extractEquation(part)' [options]='displayModeOptions'></ng-katex>
-
-  <ng-katex *ngSwitchCase='INLINE_MODE'
-  [equation]='extractEquation(part)'></ng-katex>
-
-  <span *ngSwitchDefault>{{ extractParagraph(part) }}</span>
-
-  </span>
-  </p>
+    <p>
+      <ng-container *ngFor="let segment of segments">
+        <ng-katex
+          *ngIf="segment.math else text"
+          [equation]="segment.value"
+          [options]="{ displayMode: segment.type === 'display' }">
+        </ng-katex>
+        <ng-template #text>{{ segment.value }}</ng-template>
+      </ng-container>
+    </p>
   `
 })
 export class KatexParagraphComponent {
-
-  private readonly DISPLAY_MODE: number = 2;
-  private readonly INLINE_MODE: number = 1;
-  private readonly TEXT_MODE: number = 0;
-
-  private readonly boundary: RegExp =  /(?<!\\)\$/;
-  private readonly expression: RegExp = /(?:\\\$|[^\$])+/;
-
-  private readonly display: RegExp =  new RegExp(
-    '(' +
-    this.boundary.source + this.boundary.source +
-    this.expression.source +
-    this.boundary.source + this.boundary.source +
-    ')'
-  );
-
-  private readonly inline: RegExp =  new RegExp(
-    '(' +
-    this.boundary.source  +
-    this.expression.source +
-    this.boundary.source +
-    ')'
-  );
-
-  private readonly splitRe = new RegExp(
-    this.display.source + '|' + this.inline.source
-  );
-
-  private readonly cleanRe = new RegExp(
-    '(\\${1,2})(' + this.expression.source +  ')\\1'
-  );
-
-  private readonly displayModeOptions: ko.KatexOptions = {
-    displayMode: true
-  };
-
   @Input() paragraph: string;
-  @Output() onError = new EventEmitter<any>();
 
-  hasError(error) {
-    this.onError.emit(error);
-  }
-
-  splitParagraph(paragraph: string): Array<string> {
-    let splitted = paragraph.split(this.splitRe).filter(x => x);
-    return splitted;
-  }
-
-  private classify(text: string): number {
-    if (text.match(this.display)) {
-      return this.DISPLAY_MODE;
-    } else if (text.match(this.inline)) {
-      return this.INLINE_MODE;
-    } else {
-      return this.TEXT_MODE;
-    }
-  }
-
-  private extractEquation(text: string): string {
-    let exp: string = text.match(this.cleanRe)[2];
-    return exp;
-  }
-
-  private extractParagraph(text: string): string {
-    return text.replace(/\\\$/g, '$');
+  get segments (): Segment[] {
+    return extractMath(this.paragraph);
   }
 }
