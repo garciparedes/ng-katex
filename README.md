@@ -50,7 +50,7 @@ platformBrowserDynamic().bootstrapModule(AppModule);
 **If you're not using the `angular-cli`, import the stylesheet to your `index.html`:**
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 ```
 
 ## Usage
