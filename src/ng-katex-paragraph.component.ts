@@ -8,7 +8,7 @@ import { extractMath, Segment } from 'extract-math';
       <ng-container *ngFor="let segment of segments">
         <ng-katex
           *ngIf="segment.math else text"
-          [equation]="segment.value"
+          [equation]="segment.raw"
           [options]="{ displayMode: segment.type === 'display' }">
         </ng-katex>
         <ng-template #text>{{ segment.value }}</ng-template>

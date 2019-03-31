@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/garciparedes/ng-katex#readme",
   "dependencies": {
-    "extract-math": "^1.0.2",
+    "extract-math": "^1.0.3",
     "katex": "^0.10.0"
   },
   "peerDependencies": {
