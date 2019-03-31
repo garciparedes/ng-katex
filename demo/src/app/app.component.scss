@@ -2,8 +2,13 @@ h1 {
   text-align: center;
 }
 
-input {
+input,
+textarea {
   width: 100%;
+}
+
+textarea {
+  resize: vertical;
 }
 
 ng-katex {
