@@ -1,7 +1,7 @@
 # ng-KaTeX
 
 [![npm](https://img.shields.io/npm/v/ng-katex.svg)](https://www.npmjs.com/package/ng-katex)
-[![Travis](https://img.shields.io/travis/garciparedes/ng-katex/master.svg)](https://travis-ci.org/garciparedes/ng-katex/master)
+[![Travis](https://img.shields.io/travis/garciparedes/ng-katex/master.svg)](https://travis-ci.org/garciparedes/ng-katex)
 [![npm](https://img.shields.io/npm/dy/ng-katex.svg)](https://www.npmjs.com/package/ng-katex)
 [![GitHub stars](https://img.shields.io/github/stars/garciparedes/ng-katex.svg)](https://github.com/garciparedes/ng-katex)
 [![npm](https://img.shields.io/npm/l/ng-katex.svg)](https://github.com/garciparedes/ng-katex/blob/master/README.md)
