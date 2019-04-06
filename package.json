@@ -63,7 +63,7 @@
     "rimraf": "2.6.3",
     "rollup": "1.7.4",
     "rollup-plugin-angular": "0.5.3",
-    "rollup-plugin-copy": "0.2.3",
+    "rollup-plugin-copy": "0.3.0",
     "rollup-plugin-typescript2": "0.20.1",
     "rollup-plugin-uglify": "4.0.0",
     "rxjs": "6.4.0",
