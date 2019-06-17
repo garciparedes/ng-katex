@@ -50,7 +50,9 @@ export default {
       "package.json": "./dist/package.json"
     }),
     uglify({}, minify),
-    typescript(),
+    typescript({
+        clean: false
+    }),
   ],
   onwarn: warning => {
     console.error(warning);
