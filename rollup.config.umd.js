@@ -45,12 +45,12 @@ export default {
         }
       }
     ),
-    typescript(),
     copy({
       "README.md": "./dist/README.md",
       "package.json": "./dist/package.json"
     }),
     uglify({}, minify),
+    typescript(),
   ],
   onwarn: warning => {
     console.error(warning);
