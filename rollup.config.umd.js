@@ -51,7 +51,7 @@ export default {
     }),
     uglify({}, minify),
     typescript({
-        clean: false
+        clean: true
     }),
   ],
   onwarn: warning => {
