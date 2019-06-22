@@ -26,7 +26,7 @@
     "node-sass": "4.12.0",
     "rxjs": "6.5.2",
     "rxjs-compat": "6.5.2",
-    "zone.js": "0.9.1"
+    "zone.js": "0.8.26"
   },
   "devDependencies": {
     "@angular/cli": "7.3.9",
