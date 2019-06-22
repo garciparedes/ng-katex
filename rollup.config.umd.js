@@ -26,11 +26,13 @@ export default {
       '@angular/core': '@angular/core',
       '@angular/common': '@angular/common',
       'katex': 'katex',
+      'extract-math': 'extract-math',
     },
   },
   external: [
     '@angular/core',
     '@angular/common',
+    'extract-math',
     'katex',
   ],
   plugins: [
