@@ -109,9 +109,26 @@ export class AppComponent {
 }
 ```
 
+If you want to write HTML with LaTeX equations, you can do it as follows: (Security Note: this bypasses Angular DOM Sanitization)
+
+```js
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `<ng-katex-html [html]="html"></ng-katex-html>`
+})
+export class AppComponent {
+  html: string = `
+    <div>You can write html, that contains expressions like this: $x ^ 2 + 5$ inside them. As you probably know. You also can write expressions in display mode as follows: $$\\sum_{i=1}^n(x_i^2 - \\overline{x}^2)$$. In first case you will need to use \\$expression\\$ and in the second one \\$\\$expression\\$\\$. To scape the \\$ symbol it's mandatory to write as follows: \\\\$</div><p>: <button>I'm a button</button></p>
+  `;
+}
+```
+
 ## Contributors
 
 - Sergio García Prado [@garciparedes](https://garciparedes.me)
+- Joshua Claxton [@joshclax](https://www.joshclax.com/)
 
 ## Changelog
 See [changelog](https://github.com/garciparedes/ng-katex/releases) page to get info about release changes.
