@@ -13,4 +13,9 @@
   <p>Type here your paragraph:</p>
   <p><textarea  [(ngModel)]="paragraph" rows="6"></textarea></p>
   <ng-katex-paragraph [paragraph]="paragraph"></ng-katex-paragraph>
+
+  <h2>HTML: (Security Note: this bypasses Angular DOM Sanitization)</h2>
+  <p>Type here your HTML:</p>
+  <p><textarea  [(ngModel)]="html" rows="6"></textarea></p>
+  <ng-katex-html [html]="html"></ng-katex-html>
 </div>
