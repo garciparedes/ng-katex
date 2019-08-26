@@ -18,7 +18,7 @@ To install the module you can simply type it on your command line:
 npm install ng-katex --save
 ```
 
-To add the module to your proyect add the `KatexModule` to `import`'s field of your parent module:
+To add the module to your project add the `KatexModule` to `import`'s field of your parent module:
 ```js
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
