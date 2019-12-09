@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { extractMath, Segment } from 'extract-math';
 
 @Component({
@@ -14,7 +14,8 @@ import { extractMath, Segment } from 'extract-math';
         <ng-template #text>{{ segment.value }}</ng-template>
       </ng-container>
     </p>
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class KatexParagraphComponent {
   @Input() paragraph: string;
