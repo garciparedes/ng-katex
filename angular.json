@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "demo": {
-      "root": "",
+      "root": "projects/demo",
       "sourceRoot": "src",
       "projectType": "application",
       "architect": {
@@ -12,16 +12,16 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "polyfills": "src/polyfills.ts",
+            "index": "projects/demo/src/index.html",
+            "main": "projects/demo/src/main.ts",
+            "tsConfig": "projects/demo/src/tsconfig.app.json",
+            "polyfills": "projects/demo/src/polyfills.ts",
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              "projects/demo/src/assets",
+              "projects/demo/src/favicon.ico"
             ],
             "styles": [
-              "src/styles.css"
+              "projects/demo/src/styles.css"
             ],
             "scripts": [],
             "preserveSymlinks": true 
@@ -39,8 +39,8 @@
               "buildOptimizer": true,
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "projects/demo/src/environments/environment.ts",
+                  "with": "projects/demo/src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -66,17 +66,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
+            "main": "projects/demo/src/test.ts",
             "karmaConfig": "./karma.conf.js",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
+            "polyfills": "projects/demo/src/polyfills.ts",
+            "tsConfig": "projects/demo/src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "src/styles.css"
+              "projects/demo/src/styles.css"
             ],
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              "projects/demo/src/assets",
+              "projects/demo/src/favicon.ico"
             ]
           }
         },
@@ -84,8 +84,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "projects/demo/src/tsconfig.app.json",
+              "projects/demo/src/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -95,7 +95,7 @@
       }
     },
     "demo-e2e": {
-      "root": "",
+      "root": "projects/demo-e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
       "architect": {
@@ -111,6 +111,41 @@
           "options": {
             "tsConfig": [
               "e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng-katex": {
+      "projectType": "library",
+      "root": "projects/ng-katex",
+      "sourceRoot": "projects/ng-katex/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-katex/tsconfig.lib.json",
+            "project": "projects/ng-katex/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-katex/src/test.ts",
+            "tsConfig": "projects/ng-katex/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-katex/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-katex/tsconfig.lib.json",
+              "projects/ng-katex/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

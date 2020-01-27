@@ -49,7 +49,8 @@
     "extract-math": "^1.0.3",
     "katex": "^0.11.0"
   },
-  "peerDependencies": {
+  "peerDependencies": {},
+  "devDependencies": {
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
@@ -58,15 +59,13 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
-    "rxjs": "~6.4.0",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
-  },
-  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.803.23",
+    "@angular-devkit/build-ng-packagr": "~0.803.23",
     "@angular/cli": "~8.3.23",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
     "clean-css": "4.2.1",
+    "ng-packagr": "^5.4.0",
     "node-sass": "4.13.0",
     "rimraf": "3.0.0",
     "rollup": "1.29.0",
@@ -76,6 +75,8 @@
     "rollup-plugin-typescript2": "0.25.3",
     "rxjs-compat": "6.5.4",
     "rxjs": "6.5.4",
+    "tsickle": "^0.37.0",
+    "tslib": "^1.10.0",
     "typescript": "2.9.2",
     "zone.js": "0.10.2"
   }
