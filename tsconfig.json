@@ -1,18 +1,26 @@
 {
-  "angularCompilerOptions": {
-    "genDir": "dist"
-  },
+  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl":".",
-    "target": "es5",
-    "module": "es2015",
-    "sourceMap":   true,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "declaration": true,
-    "outDir": "dist",
-    "lib": ["es2015", "dom"]
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ]
   },
-  "files": ["./ng-katex.ts"]
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
 }
