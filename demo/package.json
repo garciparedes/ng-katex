@@ -23,7 +23,7 @@
     "@angular/router": "8.2.14",
     "core-js": "3.6.4",
     "ng-katex": "file:../dist",
-    "node-sass": "4.13.0",
+    "node-sass": "4.13.1",
     "rxjs": "6.5.4",
     "rxjs-compat": "6.5.4",
     "rxjs": "6.5.4",
