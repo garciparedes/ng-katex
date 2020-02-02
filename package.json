@@ -61,7 +61,7 @@
     "@angular/platform-browser": "4.4.7",
     "@angular/core": "4.4.7",
     "clean-css": "4.2.1",
-    "node-sass": "4.13.0",
+    "node-sass": "4.13.1",
     "rimraf": "3.0.0",
     "rollup": "1.29.0",
     "rollup-plugin-angular": "0.5.3",
