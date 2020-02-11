@@ -10,7 +10,7 @@
     "start": "ng serve demo",
     "watch": "ng build ng-katex --watch",
     "build": "ng build ng-katex",
-    "build:demo": "ng build ng-katex && ng build demo",
+    "build:demo": "ng build ng-katex && ng build demo && cp -R dist/demo docs",
     "publish": "cd dist/ng-katex && npm publish"
   },
   "repository": {
