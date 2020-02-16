@@ -66,7 +66,7 @@
     "clean-css": "4.2.2",
     "ng-packagr": "5.7.1",
     "node-sass": "4.13.1",
-    "rimraf": "3.0.0",
+    "rimraf": "3.0.2",
     "rollup": "1.31.1",
     "rollup-plugin-angular": "0.5.3",
     "rollup-plugin-copy": "3.3.0",
