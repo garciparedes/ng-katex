@@ -5,4 +5,5 @@ export type KatexOptions = {
   macros?: object;
   colorIsTextColor?: boolean;
   maxSize?: number;
-}
+  output?: string;
+};
