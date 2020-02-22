@@ -1,6 +1,6 @@
 {
   "name": "ng-katex",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Angular module to write beautiful math expressions with TeX syntax boosted by KaTeX library",
   "main": "ng-katex.umd.js",
   "jsnext:main": "ng-katex.esm.js",
@@ -11,7 +11,8 @@
     "watch": "ng build ng-katex --watch",
     "build": "ng build ng-katex",
     "build:demo": "ng build ng-katex && ng build demo",
-    "publish": "cd dist/ng-katex && npm publish"
+    "publish:demo": "ng build --prod --base-href=\"https://garciparedes.me/ng-katex/\" demo && rm -rf docs && cp -R dist/demo docs",
+    "publish": "cp README.md LICENSE dist/ng-katex && cd dist/ng-katex && npm publish"
   },
   "repository": {
     "type": "git",
@@ -65,8 +66,8 @@
     "clean-css": "4.2.2",
     "ng-packagr": "5.7.1",
     "node-sass": "4.13.1",
-    "rimraf": "3.0.0",
-    "rollup": "1.29.1",
+    "rimraf": "3.0.2",
+    "rollup": "1.31.1",
     "rollup-plugin-angular": "0.5.3",
     "rollup-plugin-copy": "3.3.0",
     "rollup-plugin-terser": "5.2.0",
