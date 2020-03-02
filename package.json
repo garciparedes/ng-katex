@@ -64,7 +64,7 @@
     "@angular/platform-browser-dynamic": "8.2.14",
     "@angular/router": "8.2.14",
     "clean-css": "4.2.2",
-    "ng-packagr": "5.7.1",
+    "ng-packagr": "9.0.2",
     "node-sass": "4.13.1",
     "rimraf": "3.0.2",
     "rollup": "1.31.1",
