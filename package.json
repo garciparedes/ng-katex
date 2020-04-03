@@ -77,6 +77,6 @@
     "tsickle": "0.38.1",
     "tslib": "1.11.1",
     "typescript": "3.4.1",
-    "zone.js": "0.9.1"
+    "zone.js": "0.10.3"
   }
 }
