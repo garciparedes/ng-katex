@@ -2,7 +2,7 @@
   "name": "ng-katex",
   "version": "2.0.3",
   "dependencies": {
-    "extract-math": "1.0.5",
+    "extract-math": "1.1.0",
     "katex": "0.11.1"
   },
   "peerDependencies": {
