@@ -71,7 +71,7 @@
     "rollup-plugin-angular": "0.5.3",
     "rollup-plugin-copy": "3.3.0",
     "rollup-plugin-terser": "5.3.0",
-    "rollup-plugin-typescript2": "0.26.0",
+    "rollup-plugin-typescript2": "0.27.0",
     "rxjs": "6.5.4",
     "rxjs-compat": "6.5.4",
     "tsickle": "0.38.1",
