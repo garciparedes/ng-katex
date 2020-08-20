@@ -75,7 +75,7 @@
     "rxjs": "6.5.5",
     "rxjs-compat": "6.5.5",
     "tsickle": "0.38.1",
-    "tslib": "1.13.0",
+    "tslib": "2.0.1",
     "typescript": "3.4.1",
     "zone.js": "0.10.3"
   }
