@@ -6,7 +6,7 @@ import {
   Output,
 } from '@angular/core';
 import { KatexService } from './ng-katex.service';
-import * as ko from './ng-katex.options';
+import { KatexOptions } from 'katex';
 
 @Directive({
   selector: '[katex]',
@@ -14,7 +14,7 @@ import * as ko from './ng-katex.options';
 export class KatexDirective {
 
   @Input('katex') equation: string;
-  @Input('katex-options') options: ko.KatexOptions;
+  @Input('katex-options') options: KatexOptions;
 
   @Output() onError = new EventEmitter<any>();
 

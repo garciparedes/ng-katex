@@ -1,16 +1,14 @@
 import { ElementRef, Injectable } from '@angular/core';
-import * as ko from './ng-katex.options';
-
-import * as katex from 'katex';
+import { render, renderToString, KatexOptions } from 'katex';
 
 @Injectable()
 export class KatexService {
 
-  render(equation: string, element: ElementRef, options?: ko.KatexOptions) {
-    return katex.render(equation, element.nativeElement, options);
+  render(equation: string, element: ElementRef, options?: KatexOptions) {
+    return render(equation, element.nativeElement, options);
   }
 
-  renderToString(equation: string, options?: ko.KatexOptions): string {
-    return katex.renderToString(equation, options);
+  renderToString(equation: string, options?: KatexOptions): string {
+    return renderToString(equation, options);
   }
 }

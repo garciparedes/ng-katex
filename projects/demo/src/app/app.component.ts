@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { KatexOptions } from 'ng-katex';
+import { KatexOptions } from 'katex';
 
 @Component({
   selector: 'app-root',
