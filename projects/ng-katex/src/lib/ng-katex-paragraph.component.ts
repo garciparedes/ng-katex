@@ -18,9 +18,17 @@ import { extractMath, Segment } from 'extract-math';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class KatexParagraphComponent {
-  @Input() paragraph: string;
 
-  get segments (): Segment[] {
-    return extractMath(this.paragraph);
+  segments: Segment[] = [];
+
+  private _paragraph: string;
+
+  @Input() set paragraph(paragraph: string) {
+
+    if (paragraph !== this._paragraph) {
+      this._paragraph = paragraph;
+      this.segments = extractMath(this._paragraph);
+    }
   }
+
 }

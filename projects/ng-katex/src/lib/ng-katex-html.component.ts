@@ -10,11 +10,32 @@ import { KatexService } from './ng-katex.service';
 })
 export class KatexHtmlComponent {
   constructor(private domSanitizer: DomSanitizer, private katexService: KatexService) { }
-  @Input() html: string;
 
-  get allHtml(): SafeHtml {
-    let segments = this.segments;
-    var allHtml = segments.map((seg) => {
+  allHtml: SafeHtml;
+
+  _html: string;
+
+  private _segments: Segment[] = [];
+
+  @Input() set html(html: string) {
+
+    if (html !== this._html) {
+      this._html = html;
+      this.updateAllHtml();
+    }
+  }
+
+  private updateAllHtml() {
+
+    if (!this._html) {
+      this.allHtml = '';
+      this._segments = [];
+      return;
+    }
+
+    this._segments = extractMath(this._html);
+
+    const allHtml = this._segments.map((seg) => {
       if (seg.math) {
         return this.katexService.renderToString(seg.raw, { displayMode: seg.type === 'display' });
       }
@@ -24,10 +45,10 @@ export class KatexHtmlComponent {
     }).reduce((total, current) => {
       return total += current;
     });
-    return this.domSanitizer.bypassSecurityTrustHtml(allHtml);
+    this.allHtml = this.domSanitizer.bypassSecurityTrustHtml(allHtml);
   }
 
   get segments(): Segment[] {
-    return extractMath(this.html);
+    return this._segments;
   }
 }
