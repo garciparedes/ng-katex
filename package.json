@@ -65,7 +65,7 @@
     "@angular/router": "8.2.14",
     "@types/katex": "0.11.0",
     "clean-css": "4.2.2",
-    "ng-packagr": "9.1.5",
+    "ng-packagr": "10.1.1",
     "node-sass": "4.14.1",
     "rimraf": "3.0.2",
     "rollup": "2.32.1",
