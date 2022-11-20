@@ -3,7 +3,7 @@
   "version": "2.0.3",
   "dependencies": {
     "extract-math": "1.1.0",
-    "katex": "0.11.1"
+    "katex": "0.16.3"
   },
   "peerDependencies": {
     "@angular/common": ">=4.0.0",
